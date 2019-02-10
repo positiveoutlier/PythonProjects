@@ -9,7 +9,7 @@ s = 'bobobobobobobobobob'
 bob_counter = 0
 for index in range(len(s)):
     if index + 3 <= len(s):
-        if s[index : (index + 3)] == "bob":
+        if s[index: (index + 3)] == "bob":
             bob_counter += 1
-            
+
 print("Number of times bob occurs is: " + str(bob_counter))
