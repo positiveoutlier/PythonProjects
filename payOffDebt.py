@@ -14,8 +14,7 @@ def remainingBalance(balance, annualInterestRate, monthlyPaymentRate):
     """ Using the balance, annual interest rate and the minimum
         required monthly payment, this function calculates
         the remaining balance after one year of repayments """
-    for month in range(12):
-        month += 1 #als je range(1, 13) gebruikt hoef je dit niet meer te doen
+    for month in range(1, 13):
         monthlyRepayment = round(balance * monthlyPaymentRate, 2) #heel belangrijk als je met cijfers werkt om zoveel mogelijk floats (kommagetallen) te vermijden en ze proberen te vervangen door integers (gehele getallen), meestal gebeurt dit door met centen en percentages (getallen tusen 0 en 100) te werken ipv euro's en getallen tussen de 0 en 1
         unpaidBalance = balance - monthlyRepayment
         monthlyInterest =  unpaidBalance * (annualInterestRate / 12) #annualInterestRate / 12 kan je evt. in een variabele monthlyInterestRate zetten
